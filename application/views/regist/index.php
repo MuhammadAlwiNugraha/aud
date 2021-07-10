@@ -75,7 +75,7 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Registration Form</h2>
-                    <form method="POST">
+                    <form class="user" method="post" action="<?= base_url('regist/regist'); ?>">
                         <div class="row row-space">
                             <div class="col-6">
                                 <div class="input-group">
@@ -209,7 +209,26 @@
 
                         <div class="row row-space">
                             <div class="col-10">
-                                <label class="label">asdasdasdas</label>
+                                <label class="label">PHOTO KARTU IDENTITAS</label>
+                                <div class="form-group">
+                                    <div class="col-sm-4">Picture</div>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <label class="custom-file-label" for="image">Choose file</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-10">
+                                <label class="label">PHOTO DIRI</label>
                                 <div class="form-group">
                                     <div class="col-sm-4">Picture</div>
                                     <div class="col-sm-10">
