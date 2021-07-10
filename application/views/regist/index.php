@@ -80,13 +80,13 @@
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">NAMA LENGKAP</label>
-                                    <input class="input--style-4" type="text" name="name">
+                                    <input class="input--style-4" type="text" name="nama" value="<?= set_value('nama'); ?>">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class=" col-6">
                                 <div class="input-group">
                                     <label class="label">EMAIL</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" name="email" value="<?= set_value('email') ?>">
                                 </div>
                             </div>
                         </div>
@@ -94,22 +94,22 @@
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">NIK KTP</label>
-                                    <input class="input--style-4" type="text" name="name">
+                                    <input class="input--style-4" type="text" name="nik" value="<?= set_value('nik'); ?>">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">TEMPAT LAHIR</label>
-                                    <input class="input--style-4" type="text" name="">
+                                    <input class="input--style-4" type="text" name="tempat_lahir" value="<?= set_value('tempat_lahir'); ?>">
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
+                        <div class=" row row-space">
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">TANGGAL LAHIR</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" data-date-format="yyyy-mm-dd" type="text" name="tanggal_lahir">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">USIA SAAT INI</label>
-                                    <input class="input--style-4" type="text" name="">
+                                    <input class="input--style-4" type="text" name="usia">
                                 </div>
                             </div>
                         </div>
@@ -125,12 +125,12 @@
 
                         <div class="input-group">
                             <label class="label">ALAMAT LENGKAP SESUAI KTP</label>
-                            <input class="input--style-4" type="text" name="">
+                            <input class="input--style-4" type="text" name="alamat_ktp">
                         </div>
 
                         <div class="input-group">
                             <label class="label">ALAMAT LENGKAP TEMPAT TINGGAL SAAT INI</label>
-                            <input class="input--style-4" type="text" name="alamat">
+                            <input class="input--style-4" type="text" name="alamat_tinggal">
                         </div>
 
 
@@ -138,27 +138,40 @@
                             <div class="input-group">
                                 <label class="label m-3 col-2">AGAMA</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
+                                    <select name="agama">
                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>ISLAM</option>
-                                        <option>KRISTEN</option>
+                                        <option value="ISLAM">ISLAM</option>
+                                        <option value="KRISTEN">KRISTEN</option>
                                         <option>KATOLIK</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
                             </div>
 
-                            <div class="input-group">
+                            <!-- <div class="input-group">
                                 <label class="label m-2 col-4">JENIK KELAMIN</label>
                                 <div class="p-t-10">
-                                    <label class="radio-container m-r-45">LAKI-LAKI
-                                        <input type="radio" checked="checked" name="gender">
+                                    <label class="radio-container m-r-45" value="PRIA">LAKI-LAKI
+                                        <input type="radio" name="jk">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="radio-container">PEREMPUAN
-                                        <input type="radio" name="gender">
+                                    <label class="radio-container" value="WANITA">PEREMPUAN
+                                        <input type="radio" name="jk">
                                         <span class="checkmark"></span>
                                     </label>
+                                </div>
+                            </div> -->
+
+                            <div class="input-group">
+                                <label class="label m-3 col-2">JENIS KELAMIN</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="jk">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option value="PRIA">PRIA</option>
+                                        <option value="WANITA">WANITA</option>
+                                        <option>KATOLIK</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
                                 </div>
                             </div>
                         </div>
@@ -168,13 +181,13 @@
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">BERAT BADAN (KG)</label>
-                                    <input class="input--style-4" type="text" name="">
+                                    <input class="input--style-4" type="text" name="bb">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">TINGGI BADAN (CM)</label>
-                                    <input class="input--style-4" type="text" name="">
+                                    <input class="input--style-4" type="text" name="tb">
                                 </div>
                             </div>
                         </div>
@@ -183,9 +196,9 @@
                                 <div class="input-group">
                                     <label class="label">PENDIDIKAN TERAKHIR</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject">
+                                        <select name="pendidikan">
                                             <option disabled="disabled" selected="selected ">Choose option</option>
-                                            <option>ISLAM</option>
+                                            <option value="SMP">SMP</option>
                                             <option>KRISTEN</option>
                                             <option>KATOLIK</option>
                                         </select>
@@ -196,14 +209,14 @@
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">JURUSAN</label>
-                                    <input class="input--style-4" type="text" name="">
+                                    <input class="input--style-4" type="text" name="jurusan">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-6">
                                 <label class="label">NOMER TELP</label>
-                                <input class="input--style-4" type="text" name="phone">
+                                <input class="input--style-4" type="text" name="telp">
                             </div>
                         </div>
 
@@ -216,7 +229,7 @@
                                         <div class="row">
                                             <div class="col-sm-9">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <input type="file" class="custom-file-input" id="image" name="img_ktp">
                                                     <label class="custom-file-label" for="image">Choose file</label>
                                                 </div>
                                             </div>
@@ -235,13 +248,19 @@
                                         <div class="row">
                                             <div class="col-sm-9">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <input type="file" class="custom-file-input" id="image" name="img_selfie">
                                                     <label class="custom-file-label" for="image">Choose file</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-12">
+                                <label class="label">REF</label>
+                                <input class="input--style-4" type="text" name="ref">
                             </div>
                         </div>
                         <div class="p-t-15">
@@ -262,6 +281,12 @@
 
     <!-- Main JS-->
     <script src="<?= base_url('assets/'); ?>js/global.js"></script>
+    <script>
+        $('.custom-file-input').on('change', function() {
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+    </script>
     <script>
         $(function() {
             $(window).on('scroll', function() {
