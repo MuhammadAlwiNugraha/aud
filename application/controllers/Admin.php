@@ -7,6 +7,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model("Menu_model");
     }
 
     public function index()
@@ -78,10 +79,14 @@ class Admin extends CI_Controller
 
     public function pendaftar()
     {
+        $data['title'] = 'List';
+        //$data['daftar'] = $this->Menu_model->ubahpendaftar();
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['daftar'] = $this->Menu_model->get_data('daftar')->result();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('admin/role-access', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('admin/pendaftar', $data);
+        $this->load->view('templates/footer', $data);
     }
 }

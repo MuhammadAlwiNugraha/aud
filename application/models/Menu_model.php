@@ -12,27 +12,41 @@ class Menu_model extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
-    private function _uploadImage()
-    {
-        $config['upload_path']          = '.assets/img/daftar/';
-        $config['allowed_types']        = 'gif|jpg|png';
-        $config['file_name']            = $this->email;
-        $config['overwrite']            = true;
-        $config['max_size']             = 2048; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
-
-        $this->load->library('upload', $config);
-
-        if ($this->upload->do_upload('image')) {
-            return $this->upload->data("file_name");
-        }
-
-        return "default.jpg";
-    }
     function insert_data($data, $table)
     {
         $this->db->insert($table, $data);
         return $this->db->affected_rows() > 0;
+    }
+
+    function get_data($table)
+    {
+        return $this->db->get($table);
+    }
+
+    public function ubahpendaftar()
+    {
+        $data = [
+            'nama' => $this->input->post('nama', true),
+            'email' => $this->input->post('email', true),
+            'nik' => $this->input->post('nik', true),
+            'tempat_lahir' => $this->input->post('tempat_lahir', true),
+            'tanggal_lahir' => $this->input->post('tanggal_lahir', true),
+            'usia' => $this->input->post('usia', true),
+            'alamat_ktp' => $this->input->post('alamat_ktp', true),
+            'alamat_tinggal' => $this->input->post('alamat_tinggal', true),
+            'agama' => $this->input->post('agama', true),
+            'jk' => $this->input->post('jk', true),
+            'bb' => $this->input->post('bb', true),
+            'tb' => $this->input->post('tb', true),
+            'pendidikan' => $this->input->post('pendidikan', true),
+            'jurusan' => $this->input->post('jurusan', true),
+            'telp' => $this->input->post('telp', true),
+            'ref' => $this->input->post('ref', true),
+        ];
+
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('daftar', $data);
+
+        // UPDATE user SET name,alamat,email,nohp WHERE email = email
     }
 }
