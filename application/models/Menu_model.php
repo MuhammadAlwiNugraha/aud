@@ -30,4 +30,9 @@ class Menu_model extends CI_Model
 
         return "default.jpg";
     }
+    function insert_data($data, $table)
+    {
+        $this->db->insert($table, $data);
+        return $this->db->affected_rows() > 0;
+    }
 }

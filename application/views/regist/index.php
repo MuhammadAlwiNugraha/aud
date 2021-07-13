@@ -75,7 +75,7 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Registration Form</h2>
-                    <form class="user" method="post" action="<?= base_url('regist/regist'); ?>">
+                    <form class="user" method="post" action="<?= base_url('regist/regist'); ?>" enctype="multipart/form-data">
                         <div class="row row-space">
                             <div class="col-6">
                                 <div class="input-group">
@@ -142,7 +142,10 @@
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option value="ISLAM">ISLAM</option>
                                         <option value="KRISTEN">KRISTEN</option>
-                                        <option>KATOLIK</option>
+                                        <option value="KATOLIK">KATOLIK</option>
+                                        <option value="HINDU">HINDU</option>
+                                        <option value="BUDHA">BUDHA</option>
+                                        <option value="KONGHUCU">KONGHUCU</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -163,13 +166,13 @@
                             </div> -->
 
                             <div class="input-group">
-                                <label class="label m-3 col-2">JENIS KELAMIN</label>
+                                <label class="label m-3 col-3">JENIS KELAMIN</label>
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="jk">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option value="PRIA">PRIA</option>
                                         <option value="WANITA">WANITA</option>
-                                        <option>KATOLIK</option>
+
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -199,8 +202,11 @@
                                         <select name="pendidikan">
                                             <option disabled="disabled" selected="selected ">Choose option</option>
                                             <option value="SMP">SMP</option>
-                                            <option>KRISTEN</option>
-                                            <option>KATOLIK</option>
+                                            <option value="SMK">SMK</option>
+                                            <option value="SMA">SMA</option>
+                                            <option value="DIPLOMA">DIPLOMA</option>
+                                            <option value="SARJANA">SARJANA</option>
+
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>

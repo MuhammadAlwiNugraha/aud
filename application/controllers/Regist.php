@@ -32,26 +32,26 @@ class Regist extends CI_Controller
             $email = $this->input->post('email', false);
 
             // cek jika ada gambar yang akan diupload
-            $upload_image = $_FILES['image']['nama'];
 
-            if ($upload_image) {
-                $config['allowed_types'] = 'gif|jpg|png';
-                $config['max_size']      = '2048';
-                $config['upload_path'] = './assets/img/daftar/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['max_size']      = '20488';
+            $config['upload_path'] = './assets/img/daftar/';
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
 
-                $this->load->library('upload', $config);
-
-                if ($this->upload->do_upload('image')) {
-                    $old_image = $data['daftar']['image'];
-                    if ($old_image != 'default.jpg') {
-                        unlink(FCPATH . 'assets/img/daftar/' . $old_image);
-                    }
-                    $new_image = $this->upload->data('file_name');
-                    $this->db->set('image', $new_image);
-                } else {
-                    echo $this->upload->dispay_errors();
-                }
+            if (!empty($_FILES['img_ktp'])) {
+                $this->upload->do_upload('img_ktp');
+                $data1 = $this->upload->data();
+                $img_ktp =  $data1['file_name'];
             }
+
+            if (!empty($_FILES['img_selfie'])) {
+                $this->upload->do_upload('img_selfie');
+                $data2 = $this->upload->data();
+                $img_selfie =  $data2['file_name'];
+            }
+
+
             $data = [
                 'nama' => htmlspecialchars($this->input->post('nama', true)),
                 'email' => htmlspecialchars($email),
@@ -68,8 +68,8 @@ class Regist extends CI_Controller
                 'pendidikan' => $this->input->post('pendidikan', true),
                 'jurusan' => $this->input->post('jurusan', true),
                 'telp' => $this->input->post('telp', true),
-                'img_ktp' => $this->input->post('img_ktp', true),
-                'img_selfie' => $this->input->post('img_selfie', true),
+                'img_ktp' => $img_ktp,
+                'img_selfie' => $img_selfie,
                 'ref' => $this->input->post('ref', true),
                 // 'image' => 'default.jpg',
                 'date_created' => time()
