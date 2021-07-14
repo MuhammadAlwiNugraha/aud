@@ -12,16 +12,22 @@ class Menu_model extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
-    function insert_data($data, $table)
-    {
-        $this->db->insert($table, $data);
-        return $this->db->affected_rows() > 0;
-    }
-
     function get_data($table)
     {
         return $this->db->get($table);
     }
+
+    function edit_data($where, $table)
+    {
+        return $this->db->get_where($table, $where);
+    }
+
+    function update_data($table, $data, $where)
+    {
+        $this->db->update($table, $data, $where);
+        return $this->db->error();
+    }
+
 
     public function ubahpendaftar()
     {
