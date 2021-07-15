@@ -8,6 +8,7 @@ class Admin extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model("Menu_model");
+        $this->load->model("Daftar_model"); //load model mahasiswa
     }
 
     public function index()
@@ -119,8 +120,8 @@ class Admin extends CI_Controller
 
 
             $data = [
-                'nama' => htmlspecialchars($this->input->post('nama', true)),
-                'email' => htmlspecialchars($email),
+                'nama' => $this->input->post('nama', true),
+                'email' => $email,
                 'nik' => $this->input->post('nik', true),
                 'tempat_lahir' => $this->input->post('tempat_lahir', true),
                 'tanggal_lahir' => $this->input->post('tanggal_lahir', true),
@@ -154,7 +155,7 @@ class Admin extends CI_Controller
         }
     }
 
-    public function pendaftar()
+    public function pendaftarr()
     {
         $data['title'] = 'List';
         //$data['daftar'] = $this->Menu_model->ubahpendaftar();
@@ -167,90 +168,74 @@ class Admin extends CI_Controller
         $this->load->view('templates/footer', $data);
     }
 
-    function edit_pendaftar($id)
+    public function pendaftar()
     {
-        //$datas['title'] = 'Edit Pendaftar';
-        //$data['daftar'] = $this->Menu_model->ubahpendaftar();
-        $datas['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-        $where = array('id' => $id);
-        $data['daftar'] = $this->db->query("select * from daftar where id='$id'")->result();
-
-        $this->load->view('templates/header', $datas);
-        $this->load->view('templates/sidebar', $datas);
-        $this->load->view('templates/topbar', $datas);
-        $this->load->view('admin/edit_pendaftar', $data);
-        $this->load->view('templates/footer', $datas);
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data["title"] = "List Data ";
+        $data["data_pendaftar"] = $this->Daftar_model->getAll();
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/pendaftar', $data);
+        $this->load->view('templates/footer', $data);
     }
 
-    function update_pendaftar()
+    //method add digunakan untuk menampilkan form tambah data
+    public function add()
     {
-        $datas['title'] = 'Edit Pendaftar';
-        //$data['daftar'] = $this->Menu_model->ubahpendaftar();
-        $datas['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-        $id = $this->input->post('id');
-        $nama = $this->input->post('nama');
-        $email = $this->input->post('email');
-        $nik = $this->input->post('nik');
-        $tempat_lahir = $this->input->post('tempat_lahir');
-        $taggal_lahir = $this->input->post('tanggal_lahir');
-        $usia = $this->input->post('usia');
-        $alamat_ktp = $this->input->post('alamat_ktp');
-        $alamat_tinggal = $this->input->post('alamat_tinggal');
-        $agama = $this->input->post('agama');
-        $jk = $this->input->post('jk');
-        $bb = $this->input->post('bb');
-        $tb = $this->input->post('tb');
-        $pdk = $this->input->post('pendidikan');
-        $telp = $this->input->post('telp');
-        $ref = $this->input->post('ref');
-
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        $this->form_validation->set_rules('nik', 'Nik', 'required');
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
-        $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'required');
-        $this->form_validation->set_rules('usia', 'Usia', 'required');
-        $this->form_validation->set_rules('alamat_ktp', 'Alamat KTP', 'required');
-        $this->form_validation->set_rules('alamat_tinggal', 'Alamat Tinggal', 'required');
-        $this->form_validation->set_rules('agama', 'Agama', 'required');
-        $this->form_validation->set_rules('jk', 'Jenis Kelamin', 'required');
-        $this->form_validation->set_rules('bb', 'Berat Badan', 'required');
-        $this->form_validation->set_rules('tb', 'Tinggi Badan', 'required');
-        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required');
-        $this->form_validation->set_rules('telp', 'No. Telepon', 'required');
-        $this->form_validation->set_rules('ref', 'Referensi', 'required');
-
-        if ($this->form_validation->run() != false) {
-            $where = array('id' => $id);
-            $data = array(
-                'nama' => $nama,
-                'email' => $email,
-                'nik' => $nik,
-                'tempat_lahir' => $tempat_lahir,
-                'tanggal_lahir' => $taggal_lahir,
-                'usia' => $usia,
-                'alamat_ktp' => $alamat_ktp,
-                'alamat_ktp' => $alamat_tinggal,
-                'agama' => $agama,
-                'jk' => $jk,
-                'bb' => $bb,
-                'tb' => $tb,
-                'pendidikan' => $pdk,
-                'telp' => $telp,
-                'ref' => $ref,
-            );
-
-            $this->Menu_model->update_data('daftar', $data, $where);
-            redirect(base_url() . 'admin/pendaftar');
-        } else {
-            $where = array('id' => $id);
-            $data['daftar'] = $this->db->query("select * from daftar where id='$id'")->result();
-            $this->load->view('templates/header', $datas);
-            $this->load->view('admin/edit_pendaftar', $data);
-            $this->load->view('templates/sidebar', $datas);
-            $this->load->view('templates/footer', $datas);
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $utas = $this->Daftar_model; //objek model
+        $validation = $this->form_validation; //objek form validation
+        $validation->set_rules($utas->rules()); //menerapkan rules validasi pada utas_model
+        //kondisi jika semua kolom telah divalidasi, maka akan menjalankan method save pada utas_model
+        if ($validation->run()) {
+            $utas->save();
+            $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Data berhasil disimpan. 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button></div>');
+            redirect("admin/pendaftar");
         }
+        $data["title"] = "Tambah Data";
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/add', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    public function edit($id = null)
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        if (!isset($id)) redirect('admin/pendaftar');
+
+        $utas = $this->Daftar_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($utas->rules());
+
+        if ($validation->run()) {
+            $utas->update();
+            $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Data berhasil disimpan.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button></div>');
+            redirect("admin/pendaftar");
+        }
+        $data["title"] = "Edit Data ";
+        $data["data_pendaftar"] = $utas->getById($id);
+        if (!$data["data_pendaftar"]) show_404();
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/edit', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    function delete($id)
+    {
+        $this->Daftar_model->delete($id);
+        redirect('admin/pendaftar');
     }
 }

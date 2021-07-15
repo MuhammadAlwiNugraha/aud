@@ -53,8 +53,8 @@ class Regist extends CI_Controller
 
 
             $data = [
-                'nama' => htmlspecialchars($this->input->post('nama', true)),
-                'email' => htmlspecialchars($email),
+                'nama' => $this->input->post('nama', true),
+                'email' => $email,
                 'nik' => $this->input->post('nik', true),
                 'tempat_lahir' => $this->input->post('tempat_lahir', true),
                 'tanggal_lahir' => $this->input->post('tanggal_lahir', true),
