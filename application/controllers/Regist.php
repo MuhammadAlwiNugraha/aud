@@ -9,17 +9,17 @@ class Regist extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function index()
+    public function indexx()
     {
         $this->load->view('templates/front_nav');
         $this->load->view('regist/index');
         $this->load->view('templates/front_footer');
     }
 
-    public function regist()
+    public function index()
     {
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[daftar.email]', [
             'is_unique' => 'This email has already registered!'
         ]);
         $this->form_validation->set_rules('nik', 'Nik', 'required|trim');
@@ -29,6 +29,9 @@ class Regist extends CI_Controller
             $this->load->view('regist/index');
             $this->load->view('templates/front_footer');
         } else {
+            $this->load->view('templates/front_nav');
+            $this->load->view('regist/index');
+            $this->load->view('templates/front_footer');
             $email = $this->input->post('email', false);
 
             // cek jika ada gambar yang akan diupload
@@ -79,7 +82,7 @@ class Regist extends CI_Controller
             //$this->db->insert('daftar', $data);
             $insert = $this->db->insert('daftar', $data);
             if ($insert) {
-                echo '<script>alert("Sukses! Anda berhasil melakukan register. Silahkan hubungi kontak center.");window.location.href="' . base_url('/regist/regist') . '";</script>';
+                echo '<script>alert("Sukses! Anda berhasil melakukan register. Silahkan hubungi kontak center.");window.location.href="' . base_url('/regist') . '";</script>';
             }
             //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please Contact administrator</div>');
             //     redirect('/regist');

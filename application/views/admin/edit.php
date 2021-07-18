@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <?php
                     //create form
-                    $attributes = array('id' => 'FrmEditMahasiswa', 'method' => "post", "autocomplete" => "off");
+                    $attributes = array('id' => 'FrmEditDaftar', 'method' => "post", "autocomplete" => "off");
                     echo form_open('', $attributes);
                     ?>
                     <div class="">
@@ -73,7 +73,7 @@
                                                 <div class="input-group">
                                                     <label class="label">TANGGAL LAHIR</label>
                                                     <div class="input-group-icon">
-                                                        <input class="input--style-4 js-datepicker" data-date-format="yyyy-mm-dd" type="text" name="tanggal_lahir">
+                                                        <input class="input--style-4 js-datepicker" data-date-format="yyyy-mm-dd" type="text" name="tanggal_lahir" value="<?php echo $data_pendaftar->tanggal_lahir ?>">
                                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                                     </div>
                                                 </div>
@@ -102,46 +102,60 @@
                                             <div class="input-group">
                                                 <label class="label m-3 col-2">AGAMA</label>
                                                 <div class="rs-select2 js-select-simple select--no-search">
-                                                    <select name="agama" value=" <?= $data_pendaftar->agama; ?>">
+                                                    <select name="agama">
                                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                                        <option value="ISLAM">ISLAM</option>
-                                                        <option value="KRISTEN">KRISTEN</option>
-                                                        <option value="KATOLIK">KATOLIK</option>
-                                                        <option value="HINDU">HINDU</option>
-                                                        <option value="BUDHA">BUDHA</option>
-                                                        <option value="KONGHUCU">KONGHUCU</option>
+                                                        <option <?php if ($data_pendaftar->agama == "ISLAM") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="ISLAM">ISLAM</option>
+
+                                                        <option <?php if ($data_pendaftar->agama == "KRISTEN") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="KRISTEN">KRISTEN</option>
+                                                        <option <?php if ($data_pendaftar->agama == "KATOLIK") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="KATOLIK">KATOLIK</option>
+                                                        <option <?php if ($data_pendaftar->agama == "HINDU") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="HINDU">HINDU</option>
+                                                        <option <?php if ($data_pendaftar->agama == "BUDHA") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="BUDHA">BUDHA</option>
+                                                        <option <?php if ($data_pendaftar->agama == "KONGHUCU") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="KONGHUCU">KONGHUCU</option>
                                                     </select>
                                                     <div class="select-dropdown"></div>
                                                 </div>
                                             </div>
 
-                                            <!-- <div class="input-group">
-                                <label class="label m-2 col-4">JENIK KELAMIN</label>
-                                <div class="p-t-10">
-                                    <label class="radio-container m-r-45" value="PRIA">LAKI-LAKI
-                                        <input type="radio" name="jk">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="radio-container" value="WANITA">PEREMPUAN
-                                        <input type="radio" name="jk">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div> -->
-
                                             <div class="input-group">
                                                 <label class="label m-3 col-3">JENIS KELAMIN</label>
                                                 <div class="rs-select2 js-select-simple select--no-search">
-                                                    <select name="jk" value=" <?= $data_pendaftar->jk; ?>">
+                                                    <select name="jk">
                                                         <option disabled="disabled" selected="selected">Choose option</option>
-                                                        <option value="PRIA">PRIA</option>
-                                                        <option value="WANITA">WANITA</option>
+                                                        <option <?php if ($data_pendaftar->jk == "PRIA") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="PRIA">PRIA</option>
+
+                                                        <option <?php if ($data_pendaftar->jk == "WANITA") {
+                                                                    echo "selected='selected'";
+                                                                }
+                                                                echo $data_pendaftar->jk; ?>value="WANITA">WANITA</option>
 
                                                     </select>
                                                     <div class="select-dropdown"></div>
                                                 </div>
                                             </div>
                                         </div>
+
+
 
 
                                         <div class="row row-space">
@@ -163,13 +177,28 @@
                                                 <div class="input-group">
                                                     <label class="label">PENDIDIKAN TERAKHIR</label>
                                                     <div class="rs-select2 js-select-simple select--no-search">
-                                                        <select name="pendidikan" value=" <?= $data_pendaftar->pendidikan; ?>">
+                                                        <select name="pendidikan">
                                                             <option disabled="disabled" selected="selected ">Choose option</option>
-                                                            <option value="SMP">SMP</option>
-                                                            <option value="SMK">SMK</option>
-                                                            <option value="SMA">SMA</option>
-                                                            <option value="DIPLOMA">DIPLOMA</option>
-                                                            <option value="SARJANA">SARJANA</option>
+                                                            <option <?php if ($data_pendaftar->pendidikan == "SMP") {
+                                                                        echo "selected='selected'";
+                                                                    }
+                                                                    echo $data_pendaftar->pendidikan; ?>value="SMP">SMP</option>
+                                                            <option <?php if ($data_pendaftar->pendidikan == "SMK") {
+                                                                        echo "selected='selected'";
+                                                                    }
+                                                                    echo $data_pendaftar->pendidikan; ?>value="SMK">SMK</option>
+                                                            <option <?php if ($data_pendaftar->pendidikan == "SMA") {
+                                                                        echo "selected='selected'";
+                                                                    }
+                                                                    echo $data_pendaftar->pendidikan; ?>value="SMA">SMA</option>
+                                                            <option <?php if ($data_pendaftar->pendidikan == "DIPLOMA") {
+                                                                        echo "selected='selected'";
+                                                                    }
+                                                                    echo $data_pendaftar->pendidikan; ?>value="DIPLOMA">DIPLOMA</option>
+                                                            <option <?php if ($data_pendaftar->pendidikan == "SARJANA") {
+                                                                        echo "selected='selected'";
+                                                                    }
+                                                                    echo $data_pendaftar->pendidikan; ?>value="SARJANA">SARJANA</option>
 
                                                         </select>
                                                         <div class="select-dropdown"></div>
@@ -227,6 +256,17 @@
                                                     </div>
                                                 </div>
                                             </div> -->
+                                        <div class="row row-space">
+                                            <div class="col-md-4">
+                                                <input type="hidden" name="old_img_ktp" value="<?= $data_pendaftar->img_ktp; ?>">
+                                                <img src="<?= base_url('assets/img/daftar/') . $data_pendaftar->img_ktp; ?>" class="card-img">
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <input type="hidden" name="old_img_selfie" value="<?= $data_pendaftar->img_selfie; ?>">
+                                                <img src="<?= base_url('assets/img/daftar/') . $data_pendaftar->img_selfie; ?>" class="card-img">
+                                            </div>
+                                        </div>
                                         <div class="row row-space">
                                             <div class="col-12">
                                                 <label class="label">REF</label>

@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .JumboHeaderImg {
+        background-image: url("assets/img/bg6.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
 
 <head>
     <meta charset="UTF-8">

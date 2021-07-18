@@ -83,12 +83,16 @@ class Daftar_model extends CI_Model
             "telp" => $this->input->post('telp'),
             "ref" => $this->input->post('ref')
         );
+
         return $this->db->update($this->table, $data, array('id' => $this->input->post('id')));
     }
 
-    //hapus data mahasiswa
+    //hapus data
     public function delete($id)
     {
-        return $this->db->delete($this->table, array("id" => $id));
+        //return $this->db->delete($this->table, array("id" => $id));
+
+        $hasil = $this->db->query("DELETE FROM daftar WHERE id='$id'");
+        return $hasil;
     }
 }

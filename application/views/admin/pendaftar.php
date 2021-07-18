@@ -16,29 +16,50 @@
 
 <!-- Main CSS-->
 <link href="<?= base_url('assets/'); ?>css/main.css" rel="stylesheet" media="all">
-<div class="container pt-5">
+
+<!-- Bootstrap 4.5.2-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Fontawesome 5.15.3-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Datatables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" defer></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+<div class="container-fluid">
+
     <h3><?= $title ?></h3>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb ">
             <li class="breadcrumb-item"><a>Data Pendaftar</a></li>
             <li class="breadcrumb-item active" aria-current="page">List Data</li>
         </ol>
+
     </nav>
     <div class="row">
         <div class="col-md-12">
-            <a class="btn btn-primary mb-2" href="<?= base_url('admin/add'); ?>">Tambah Data</a>
-            <a class="btn btn-primary mb-2" data-toggle="modal" data-target="#tambah-data" class="btn btn-primary mb-2">Tambah Data</a>
             <div mb-2>
                 <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
                 <?php if ($this->session->flashdata('message')) :
                     echo $this->session->flashdata('message');
                 endif; ?>
             </div>
-
+            <a class="btn btn-primary mb-2" data-toggle="modal" data-target="#tambah-data">Tambah Data</a>
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover" id="tablePendaftar">
+
+
                             <thead>
                                 <tr class="table-success">
                                     <th></th>
@@ -52,16 +73,17 @@
                                 <?php foreach ($data_pendaftar as $row) : ?>
                                     <tr>
                                         <td>
-                                            <a href="<?= site_url('admin/edit/' . $row->id) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> </a>
+                                            <a href="<?= site_url('admin/edit/' . $row->id) ?>" class="btn btn-outline btn-circle btn-sm purple"><i class="fa fa-edit"></i> </a>
+                                            <a href="<?= base_url('admin/edit/' . $row->id) ?>" data-toggle="modal" data-target="#view-data<?= $row->id; ?>" class="btn btn-outline btn-circle btn-sm purple"><i class="fa fa-eye"></i> </a>
+                                            <a href="<?= base_url('admin/delete/' . $row->id) ?>" data-toggle="modal" data-target="#hapus-data<?= $row->id; ?>" class="btn btn-outline btn-circle btn-sm purple"><i class="fa fa-trash"></i> </a>
 
-                                            <a href="<?= base_url('admin/delete/' . $row->id) ?>" class="btn btn-danger btn-sm item-delete"><i class="fa fa-trash"></i> </a>
                                         </td>
                                         <td><?= $row->nama ?></td>
                                         <td><?= $row->nik ?></td>
 
                                         <td><?= $row->email ?></td>
 
-                                        <td><?php echo date('d F Y', $row->date_created); ?></td>
+                                        <td><?php echo date('d F Y H:i:s', $row->date_created); ?></td>
 
                                     </tr>
                                 <?php endforeach; ?>
@@ -74,27 +96,45 @@
     </div>
 </div>
 
-<!-- Modal dialog hapus data-->
-<div class="modal fade" id="modal_hapus" tabindex="-1" aria-labelledby="myModalDeleteLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="myModalDeleteLabel">Konfirmasi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Anda ingin menghapus data ini?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-danger" id="btdelete">Lanjutkan</button>
+<!-- Modal dialog view data-->
 
+<?php $no = 0;
+foreach ($data_pendaftar as $i) : $no++; ?>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="view-data<?= $i->id; ?>" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">View Data, <?= $i->nama; ?></h4>
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+
+                </div>
+                <form action="<?php echo site_url('admin/edit'); ?>" method="post">
+                    <div class="modal-body">
+                        <div class="card mb-8 col-lg-13">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                    <img src="<?= base_url('assets/img/daftar/') . $i->img_ktp; ?>" class="card-img">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="<?= base_url('assets/img/daftar/') . $i->img_selfie; ?>" class="card-img">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <input type="hidden" class="form-control" id="id" name="id" value=" <?= $i->id; ?>">
+                                        <h5 class="card-title"><?= $i->nama; ?></h5>
+                                        <p class="card-text"><?= $i->email; ?></p>
+                                        <p class="card-text"><small class="text-muted">Member since <?php echo date('d F Y H:i:s', $i->date_created); ?></small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
+<?php endforeach; ?>
 
 <!-- Modal Tambah -->
 <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="tambah-data" class="modal fade">
@@ -180,20 +220,6 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-
-                        <!-- <div class="input-group">
-                                <label class="label m-2 col-4">JENIK KELAMIN</label>
-                                <div class="p-t-10">
-                                    <label class="radio-container m-r-45" value="PRIA">LAKI-LAKI
-                                        <input type="radio" name="jk">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="radio-container" value="WANITA">PEREMPUAN
-                                        <input type="radio" name="jk">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div> -->
 
                         <div class="input-group">
                             <label class="label m-3 col-3">JENIS KELAMIN</label>
@@ -312,8 +338,31 @@
 </div>
 <!-- END Modal Tambah -->
 
+<?php
+foreach ($data_pendaftar as $i) : ?>
+    <!-- ============ MODAL HAPUS BARANG =============== -->
+    <div class="modal fade" id="hapus-data<?= $i->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="myModalLabel">Hapus Data, <?= $i->nama; ?></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                </div>
+                <form class="form-horizontal" method="post" action="<?php echo site_url('admin/delete'); ?>">
+                    <div class="modal-body">
+                        <p>Anda yakin mau menghapus <b><?php echo $i->nama; ?></b>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="id" name="id" value=" <?= $i->id; ?>">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
+                        <button class="btn btn-danger">Hapus</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
 
-<script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
 <!-- Vendor JS-->
 <script src="<?= base_url('assets/'); ?>vendor/select2/select2.min.js"></script>
 <script src="<?= base_url('assets/'); ?>vendor/datepicker/moment.min.js"></script>
@@ -322,6 +371,17 @@
 <!-- Main JS-->
 <script src="<?= base_url('assets/'); ?>js/global.js"></script>
 <script>
+    $(document).ready(function() {
+        $('#tablePendaftar').dataTable({
+            "bPaginate": true,
+            "bLengthChange": true,
+            "bFilter": true,
+            "bInfo": true,
+            "searching": true,
+            "bAutoWidth": true
+        });
+    });
+
     $('.custom-file-input').on('change', function() {
         let fileName = $(this).val().split('\\').pop();
         $(this).next('.custom-file-label').addClass("selected").html(fileName);

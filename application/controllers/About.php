@@ -11,7 +11,7 @@ class About extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'My Profile';
+        $data['title'] = 'About';
 
         $this->load->view('templates/front_nav');
         $this->load->view('home/about');
