@@ -8,7 +8,9 @@ class Admin extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model("Menu_model");
-        $this->load->model("Daftar_model"); //load model mahasiswa
+        $this->load->model("Gallery_model");
+        $this->load->model("Daftar_model"); //load model
+        $this->load->library('upload');
     }
 
     public function index()
@@ -28,9 +30,7 @@ class Admin extends CI_Controller
     {
         $data['title'] = 'Role';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
         $data['role'] = $this->db->get('user_role')->result_array();
-
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -139,8 +139,6 @@ class Admin extends CI_Controller
                 'date_created' => time()
             ];
 
-
-            //$this->db->insert('daftar', $data);
             $insert = $this->db->insert('daftar', $data);
             if ($insert) {
                 echo '<script>alert("Sukses! Data Berhasil dimasukkan");window.location.href="' . base_url('/admin/pendaftar') . '";</script>';
@@ -186,7 +184,7 @@ class Admin extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/add', $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/footer');
     }
 
     public function edit($id = null)
@@ -214,7 +212,7 @@ class Admin extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/edit', $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/footer');
     }
 
     public function update()
@@ -265,14 +263,8 @@ class Admin extends CI_Controller
         redirect('index.php/admin/display_product_list');
     }
 
-
-
-
     function delete()
     {
-        // $this->Daftar_model->delete($id);
-        // redirect('admin/pendaftar');
-
         $id = $this->input->post('id');
         $this->Daftar_model->delete($id);
         redirect('admin/pendaftar');

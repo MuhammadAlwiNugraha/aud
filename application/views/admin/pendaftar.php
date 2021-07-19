@@ -1,43 +1,13 @@
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
-<link rel="stylesheet" href="<?= base_url('assets/js/bootstrap.min.js') ?>" />
+<script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Icons font CSS-->
 
-<link href="<?= base_url('assets/'); ?>vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-<link href="<?= base_url('assets/'); ?>vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-<!-- Font special for pages-->
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-<!-- Vendor CSS-->
-<link href="<?= base_url('assets/'); ?>vendor/select2/select2.min.css" rel="stylesheet" media="all">
-<link href="<?= base_url('assets/'); ?>vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-<!-- Main CSS-->
-<link href="<?= base_url('assets/'); ?>css/main.css" rel="stylesheet" media="all">
-
-<!-- Bootstrap 4.5.2-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!-- Fontawesome 5.15.3-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- Datatables -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" defer></script>
-<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<link href="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<!-- Begin Page Content -->
 
 <div class="container-fluid">
 
-    <h3><?= $title ?></h3>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb ">
             <li class="breadcrumb-item"><a>Data Pendaftar</a></li>
@@ -47,26 +17,23 @@
     </nav>
     <div class="row">
         <div class="col-md-12">
-            <div mb-2>
-                <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
-                <?php if ($this->session->flashdata('message')) :
-                    echo $this->session->flashdata('message');
-                endif; ?>
-            </div>
-            <a class="btn btn-primary mb-2" data-toggle="modal" data-target="#tambah-data">Tambah Data</a>
+            <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+
+            <?= $this->session->flashdata('message'); ?>
+
+            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#tambah-data">tambah-data</a>
+
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover" id="tablePendaftar">
-
-
+                        <table class="table table-hover" id="tablePendaftar" cellspacing="0" width="100%">
                             <thead>
-                                <tr class="table-success">
-                                    <th></th>
-                                    <th>NAMA</th>
-                                    <th>NIK</th>
-                                    <th>EMAIL</th>
-                                    <th>DATE CREATED</th>
+                                <tr>
+                                    <th scope="col">ACTION</th>
+                                    <th scope="col">NAMA</th>
+                                    <th scope="col">NIK</th>
+                                    <th scope="col">EMAIL</th>
+                                    <th scope="col">DATE CREATED</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -76,13 +43,10 @@
                                             <a href="<?= site_url('admin/edit/' . $row->id) ?>" class="btn btn-outline btn-circle btn-sm purple"><i class="fa fa-edit"></i> </a>
                                             <a href="<?= base_url('admin/edit/' . $row->id) ?>" data-toggle="modal" data-target="#view-data<?= $row->id; ?>" class="btn btn-outline btn-circle btn-sm purple"><i class="fa fa-eye"></i> </a>
                                             <a href="<?= base_url('admin/delete/' . $row->id) ?>" data-toggle="modal" data-target="#hapus-data<?= $row->id; ?>" class="btn btn-outline btn-circle btn-sm purple"><i class="fa fa-trash"></i> </a>
-
                                         </td>
                                         <td><?= $row->nama ?></td>
                                         <td><?= $row->nik ?></td>
-
                                         <td><?= $row->email ?></td>
-
                                         <td><?php echo date('d F Y H:i:s', $row->date_created); ?></td>
 
                                     </tr>
@@ -92,8 +56,13 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
+
+
+
 </div>
 
 <!-- Modal dialog view data-->
@@ -363,22 +332,23 @@ foreach ($data_pendaftar as $i) : ?>
     </div>
 <?php endforeach; ?>
 
-<!-- Vendor JS-->
-<script src="<?= base_url('assets/'); ?>vendor/select2/select2.min.js"></script>
-<script src="<?= base_url('assets/'); ?>vendor/datepicker/moment.min.js"></script>
-<script src="<?= base_url('assets/'); ?>vendor/datepicker/daterangepicker.js"></script>
 
-<!-- Main JS-->
-<script src="<?= base_url('assets/'); ?>js/global.js"></script>
+<!-- Page level plugins -->
+<script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js" defer></script>
+<script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
+
 <script>
     $(document).ready(function() {
         $('#tablePendaftar').dataTable({
-            "bPaginate": true,
-            "bLengthChange": true,
-            "bFilter": true,
-            "bInfo": true,
+            "paging": true,
+            "lengthChange": true,
             "searching": true,
-            "bAutoWidth": true
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
         });
     });
 

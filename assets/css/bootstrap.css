@@ -6071,9 +6071,6 @@ fieldset:disabled .btn {
   position: relative;
   width: 100%;
   overflow: hidden;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 .carousel-inner::after {
   display: block;

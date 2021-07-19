@@ -11,9 +11,9 @@ class Regist extends CI_Controller
 
     public function indexx()
     {
-        $this->load->view('templates/front_nav');
-        $this->load->view('regist/index');
-        $this->load->view('templates/front_footer');
+        $this->load->view('templates/front_nav', $data);
+        $this->load->view('regist/index', $data);
+        $this->load->view('templates/front_footer', $data);
     }
 
     public function index()
@@ -25,9 +25,9 @@ class Regist extends CI_Controller
         $this->form_validation->set_rules('nik', 'Nik', 'required|trim');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/front_nav');
-            $this->load->view('regist/index');
-            $this->load->view('templates/front_footer');
+            $this->load->view('templates/front_nav', $data);
+            $this->load->view('regist/index', $data);
+            $this->load->view('templates/front_footer', $data);
         } else {
             $this->load->view('templates/front_nav');
             $this->load->view('regist/index');

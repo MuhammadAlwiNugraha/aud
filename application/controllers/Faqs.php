@@ -11,8 +11,9 @@ class Faqs extends CI_Controller
 
     public function index()
     {
-        $this->load->view('templates/front_nav');
-        $this->load->view('home/faqs');
-        $this->load->view('templates/front_footer');
+        $data['title'] = 'Contact';
+        $this->load->view('templates/front_nav', $data);
+        $this->load->view('home/faqs', $data);
+        $this->load->view('templates/front_footer', $data);
     }
 }

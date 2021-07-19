@@ -82,6 +82,7 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="<?= base_url('/') ?>" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a href="<?= base_url('gallery') ?>" class="nav-link text-uppercase font-weight-bold">Gallery</a></li>
                     <li class="nav-item"><a href="<?= base_url('about') ?>" class="nav-link text-uppercase font-weight-bold">About</a></li>
                     <li class="nav-item"><a href="<?= base_url('faqs') ?>" class="nav-link text-uppercase font-weight-bold">FAQs</a></li>
                     <li class="nav-item"><a href="<?= base_url('contact') ?>" class="nav-link text-uppercase font-weight-bold">contact</a></li>
