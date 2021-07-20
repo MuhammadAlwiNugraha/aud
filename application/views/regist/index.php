@@ -27,6 +27,7 @@
 
     <!-- Main CSS-->
     <link href="<?= base_url('assets/'); ?>css/main.css" rel="stylesheet" media="all">
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script>
@@ -98,13 +99,18 @@
                                     <div class="col-6">
                                         <div class="input-group">
                                             <label class="label">NAMA LENGKAP</label>
+                                            <small>SESUAI IDENTITAS (KTP/SIM/AKTA/LAINNYA) </small>
                                             <input class="input--style-4" type="text" name="nama" value="<?= set_value('nama'); ?>">
                                         </div>
                                     </div>
                                     <div class=" col-6">
                                         <div class="input-group">
-                                            <label class="label">EMAIL</label>
+                                            <label class="label">EMAIL </label>
+                                            <hr>
+                                            </hr>
+                                            <p><small>EMAIL AKTIF (GMAIL/Yahoo! Mail/DLL)</small></p>
                                             <input class="input--style-4" type="email" name="email" value="<?= set_value('email') ?>">
+                                            <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -113,12 +119,14 @@
                                         <div class="input-group">
                                             <label class="label">NIK KTP</label>
                                             <input class="input--style-4" type="text" name="nik" value="<?= set_value('nik'); ?>">
+                                            <?= form_error('nik', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="input-group">
                                             <label class="label">TEMPAT LAHIR</label>
                                             <input class="input--style-4" type="text" name="tempat_lahir" value="<?= set_value('tempat_lahir'); ?>">
+                                            <?= form_error('tempat_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -127,15 +135,17 @@
                                         <div class="input-group">
                                             <label class="label">TANGGAL LAHIR</label>
                                             <div class="input-group-icon">
-                                                <input class="input--style-4 js-datepicker" data-date-format="yyyy-mm-dd" type="text" id="hitungumur" name="tanggal_lahir">
+                                                <input class="input--style-4 js-datepicker" data-date-format="yyyy-mm-dd" type="text" id="hitungumur" name="tanggal_lahir" value="<?= set_value('tanggal_lahir'); ?>">
                                                 <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                                <?= form_error('tanggal_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="input-group">
                                             <label class="label">USIA SAAT INI</label>
-                                            <input class="input--style-4" type="text" id="umur" name="usia">
+                                            <input class="input--style-4" type="text" id="umur" name="usia" value="<?= set_value('usia'); ?>">
+                                            <?= form_error('usia', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -143,12 +153,14 @@
 
                                 <div class="input-group">
                                     <label class="label">ALAMAT LENGKAP SESUAI KTP</label>
-                                    <input class="input--style-4" type="text" name="alamat_ktp">
+                                    <input class="input--style-4" type="text" name="alamat_ktp" value="<?= set_value('alamat_ktp'); ?>">
+                                    <?= form_error('alamat_ktp', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
 
                                 <div class="input-group">
                                     <label class="label">ALAMAT LENGKAP TEMPAT TINGGAL SAAT INI</label>
-                                    <input class="input--style-4" type="text" name="alamat_tinggal">
+                                    <input class="input--style-4" type="text" name="alamat_tinggal" value="<?= set_value('alamat_tinggal'); ?>">
+                                    <?= form_error('alamat_tinggal', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
 
 
@@ -156,7 +168,7 @@
                                     <div class="input-group">
                                         <label class="label m-3 col-2">AGAMA</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="agama">
+                                            <select name="agama" value="<?= set_value('agama'); ?>">
                                                 <option disabled="disabled" selected="selected">Choose option</option>
                                                 <option value="ISLAM">ISLAM</option>
                                                 <option value="KRISTEN">KRISTEN</option>
@@ -166,6 +178,7 @@
                                                 <option value="KONGHUCU">KONGHUCU</option>
                                             </select>
                                             <div class="select-dropdown"></div>
+                                            <?= form_error('agama', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
 
@@ -186,13 +199,14 @@
                                     <div class="input-group">
                                         <label class="label m-3 col-3">JENIS KELAMIN</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="jk">
+                                            <select name="jk" value="<?= set_value('jk'); ?>">
                                                 <option disabled="disabled" selected="selected">Choose option</option>
                                                 <option value="PRIA">PRIA</option>
                                                 <option value="WANITA">WANITA</option>
 
                                             </select>
                                             <div class="select-dropdown"></div>
+                                            <?= form_error('jk', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -202,13 +216,15 @@
                                     <div class="col-6">
                                         <div class="input-group">
                                             <label class="label">BERAT BADAN (KG)</label>
-                                            <input class="input--style-4" type="text" name="bb">
+                                            <input class="input--style-4" type="text" name="bb" value="<?= set_value('bb'); ?>">
+                                            <?= form_error('bb', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="input-group">
                                             <label class="label">TINGGI BADAN (CM)</label>
-                                            <input class="input--style-4" type="text" name="tb">
+                                            <input class="input--style-4" type="text" name="tb" value="<?= set_value('tb'); ?>">
+                                            <?= form_error('tb', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +233,7 @@
                                         <div class="input-group">
                                             <label class="label">PENDIDIKAN TERAKHIR</label>
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="pendidikan">
+                                                <select name="pendidikan" value="<?= set_value('pendidikan'); ?>">
                                                     <option disabled="disabled" selected="selected ">Choose option</option>
                                                     <option value="SMP">SMP</option>
                                                     <option value="SMK">SMK</option>
@@ -227,30 +243,36 @@
 
                                                 </select>
                                                 <div class="select-dropdown"></div>
+                                                <?= form_error('pendidikan', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="input-group">
                                             <label class="label">JURUSAN</label>
-                                            <input class="input--style-4" type="text" name="jurusan">
+                                            <input class="input--style-4" type="text" name="jurusan" value="<?= set_value('jurusan'); ?>">
+                                            <?= form_error('jurusan', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row row-space">
                                     <div class="col-6">
                                         <label class="label">NOMER TELP</label>
-                                        <input class="input--style-4" type="text" name="telp">
+                                        <small>AKTIF GSM DAN WHATSAPP</small>
+                                        <input class="input--style-4" type="text" name="telp" value="<?= set_value('telp'); ?>">
+                                        <?= form_error('telp', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                 </div>
 
                                 <div class="row row-space py-3">
                                     <div class="col-40">
                                         <label style="text-align:center;" class="label">PHOTO KARTU IDENTITAS</label>
+
                                         <div class="form-group">
                                             <div class="col-md-200">
-                                                <img src="assets/img/ktpcontoh.jpg" width=150% height=150% class="img-fluid" alt="Responsive image">
+                                                <img src="<?= base_url('assets/'); ?>img/ktpcontoh.jpg" width=150% height=150% class="img-fluid" alt="Responsive image">
                                             </div>
+                                            <small>KTP / SIM / LAINNYA</small>
                                             <div class="col-sm-4">Picture KTP</div>
                                             <div class="col-sm-10">
                                                 <div class="row">
@@ -258,6 +280,7 @@
                                                         <div class="custom-file">
                                                             <input type="file" class="custom-file-input" id="image" name="img_ktp">
                                                             <label class="custom-file-label" for="image">Choose file</label>
+                                                            <?= form_error('img_ktp', '<small class="text-danger pl-3">', '</small>'); ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -269,6 +292,7 @@
                                 <div class="row row-space">
                                     <div class="col-10">
                                         <label class="label">PHOTO DIRI</label>
+                                        <small>PAS PHOTO / PHOTO SELFIE TERBARU</small>
                                         <div class="form-group">
                                             <div class="col-sm-4">Picture</div>
                                             <div class="col-sm-10">
@@ -277,6 +301,7 @@
                                                         <div class="custom-file">
                                                             <input type="file" class="custom-file-input" id="image" name="img_selfie">
                                                             <label class="custom-file-label" for="image">Choose file</label>
+                                                            <?= form_error('img_selfie', '<small class="text-danger pl-3">', '</small>'); ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -287,7 +312,9 @@
                                 <div class="row row-space">
                                     <div class="col-12">
                                         <label class="label">REF</label>
-                                        <input class="input--style-4" type="text" name="ref">
+                                        <small>ANDA MENDAPATKAN INFORMASI MENGENAI PROGRAM INI DARI MANA ATAU SIAPA, CONTOH : IKLAN (SEBUTKAN MEDIANYA), TEMAN, SAUDARA ATAU KERABAT LAINNYA (SEBUTKAN NAMA LENGKAPNYA),</small>
+                                        <input class="input--style-4" type="text" name="ref" value="<?= set_value('ref'); ?>">
+                                        <?= form_error('ref', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                 </div>
                                 <div class="p-t-15">

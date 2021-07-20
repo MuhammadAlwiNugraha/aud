@@ -1,4 +1,11 @@
 <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
+<link href="<?= base_url('assets/'); ?>vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="<?= base_url('assets/'); ?>vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+<link href="<?= base_url('assets/'); ?>vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+<link href="<?= base_url('assets/'); ?>vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="<?= base_url('assets/'); ?>css/main.css" rel="stylesheet" media="all">
 
 
 <link href="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -331,8 +338,13 @@ foreach ($data_pendaftar as $i) : ?>
         </div>
     </div>
 <?php endforeach; ?>
+<!-- Jquery JS-->
+<script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
 
-
+<script src="<?= base_url('assets/'); ?>vendor/select2/select2.min.js"></script>
+<script src="<?= base_url('assets/'); ?>vendor/datepicker/moment.min.js"></script>
+<script src="<?= base_url('assets/'); ?>vendor/datepicker/daterangepicker.js"></script>
+<script src="<?= base_url('assets/'); ?>js/global.js"></script>
 <!-- Page level plugins -->
 <script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js" defer></script>
 <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>

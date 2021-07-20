@@ -88,11 +88,32 @@ class Daftar_model extends CI_Model
     }
 
     //hapus data
-    public function delete($id)
+    public function deletee($id)
     {
         //return $this->db->delete($this->table, array("id" => $id));
 
         $hasil = $this->db->query("DELETE FROM daftar WHERE id='$id'");
         return $hasil;
+    }
+
+    public function delette($id, $img_ktp, $img_selfie)
+    {
+        $this->db->where('id', $id);
+
+        unlink("assets/img/daftar" . $img_ktp);
+        unlink("assets/img/daftar" . $img_selfie);
+
+        $this->db->delete('daftar', array('id' => $id));
+    }
+
+    public function delete($id)
+    {
+        $this->db->trans_start();
+        $this->db->query("delete from daftar where id='$id'");
+        $this->db->trans_complete();
+        if ($this->db->trans_status() == true)
+            return true;
+        else
+            return false;
     }
 }

@@ -135,7 +135,7 @@ html {
     #FDA300 - orange 
 */
 .text-orange {
-  color: #fda300;
+  color: #186aba;
 }
 .button {
   position: relative;
@@ -155,14 +155,14 @@ html {
 .button-orange {
   color: #fff;
   font-weight: bold;
-  background: #fda300;
+  background: #186aba;
   transition: 0.5s;
 }
 .button-orange:hover {
   color: #fff;
   background: transparent;
-  color: #fda300;
-  border: 1px solid #fda300;
+  color: #186aba;
+  border: 1px solid #186aba;
 }
 .header {
   position: ;

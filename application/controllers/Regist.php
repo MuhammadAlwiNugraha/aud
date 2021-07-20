@@ -23,11 +23,30 @@ class Regist extends CI_Controller
             'is_unique' => 'This email has already registered!'
         ]);
         $this->form_validation->set_rules('nik', 'Nik', 'required|trim');
+        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required|trim');
+        $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'required|trim');
+        $this->form_validation->set_rules('usia', 'Usia', 'required|trim');
+        $this->form_validation->set_rules('alamat_ktp', 'Alamat KTP', 'required|trim');
+        $this->form_validation->set_rules('alamat_tinggal', 'Alamat Tinggal', 'required|trim');
+        $this->form_validation->set_rules('agama', 'Agama', 'required|trim');
+        $this->form_validation->set_rules('jk', 'Jenis Kelamin', 'required|trim');
+        $this->form_validation->set_rules('bb', 'Berat Badan', 'required|trim');
+        $this->form_validation->set_rules('tb', 'Tinggi Badan', 'required|trim');
+        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required|trim');
+        $this->form_validation->set_rules('jurusan', 'Jurusan', 'required|trim');
+        $this->form_validation->set_rules('telp', 'Telepon', 'required|trim');
+        if (empty($_FILES['img_ktp'])) {
+            $this->form_validation->set_rules('img_ktp', 'Foto KTP', 'required');
+        }
+        if (empty($_FILES['img_selfie'])) {
+            $this->form_validation->set_rules('img_selfie', 'Foto Diri', 'required');
+        }
+        $this->form_validation->set_rules('ref', 'Referensi', 'required|trim');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/front_nav', $data);
-            $this->load->view('regist/index', $data);
-            $this->load->view('templates/front_footer', $data);
+            $this->load->view('templates/front_nav');
+            $this->load->view('regist/index');
+            $this->load->view('templates/front_footer');
         } else {
             $this->load->view('templates/front_nav');
             $this->load->view('regist/index');
@@ -36,9 +55,10 @@ class Regist extends CI_Controller
 
             // cek jika ada gambar yang akan diupload
 
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|PNG';
             $config['max_size']      = '20488';
             $config['upload_path'] = './assets/img/daftar/';
+            $config['encrypt_name'] = TRUE;
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
 

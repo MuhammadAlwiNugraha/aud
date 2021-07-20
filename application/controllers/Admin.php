@@ -8,7 +8,6 @@ class Admin extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model("Menu_model");
-        $this->load->model("Gallery_model");
         $this->load->model("Daftar_model"); //load model
         $this->load->library('upload');
     }
@@ -99,6 +98,7 @@ class Admin extends CI_Controller
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size']      = '20488';
             $config['upload_path'] = './assets/img/daftar/';
+            $config['encrypt_name'] = TRUE;
 
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
@@ -263,10 +263,35 @@ class Admin extends CI_Controller
         redirect('index.php/admin/display_product_list');
     }
 
-    function delete()
+    public function delette()
     {
         $id = $this->input->post('id');
         $this->Daftar_model->delete($id);
+        redirect('admin/pendaftar');
+    }
+
+    public function deleete()
+    {
+        $id = $this->input->post('id');
+        $img_ktp = $this->input->post('img_ktp');
+        $img_selfie = $this->input->post('img_selfie');
+
+        $this->Daftar_model->delete($id, $img_selfie, $img_ktp);
+        redirect('admin/pendaftar');
+    }
+
+    public function delete()
+    {
+        $id = $this->input->post('id');
+        $img_ktp = $this->input->post('img_ktp');
+        $path = './assets/img/daftar/' . $img_ktp;
+        unlink($path);
+
+        $pathh = './assets/img/daftar/' . $img_selfie;
+        unlink($pathh);
+
+        $this->Daftar_model->delete($id);
+        echo $this->session->set_flashdata('msg', 'success-hapus');
         redirect('admin/pendaftar');
     }
 }
