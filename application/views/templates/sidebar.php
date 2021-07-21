@@ -3,10 +3,12 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-code"></i>
+                <div class="sidebar-brand-icon">
+                    <!-- <div class="sidebar-brand-icon rotate-n-15"> -->
+                    <!-- <img src="<?= base_url('assets/'); ?>img/logo5.png" width="20" height="20"> -->
+                    <!-- <i class="fas fa-code"></i> -->
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin Page</div>
+                <div class="sidebar-brand-text mx-1">Admin Page</div>
             </a>
 
             <!-- Divider -->

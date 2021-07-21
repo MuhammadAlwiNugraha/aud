@@ -263,23 +263,6 @@ class Admin extends CI_Controller
         redirect('index.php/admin/display_product_list');
     }
 
-    public function delette()
-    {
-        $id = $this->input->post('id');
-        $this->Daftar_model->delete($id);
-        redirect('admin/pendaftar');
-    }
-
-    public function deleete()
-    {
-        $id = $this->input->post('id');
-        $img_ktp = $this->input->post('img_ktp');
-        $img_selfie = $this->input->post('img_selfie');
-
-        $this->Daftar_model->delete($id, $img_selfie, $img_ktp);
-        redirect('admin/pendaftar');
-    }
-
     public function delete()
     {
         $id = $this->input->post('id');
@@ -293,5 +276,16 @@ class Admin extends CI_Controller
         $this->Daftar_model->delete($id);
         echo $this->session->set_flashdata('msg', 'success-hapus');
         redirect('admin/pendaftar');
+    }
+
+    public function pdfkeun($id)
+    {
+        //$this->load->model('Daftar_model');
+        //$data["data_pendaftar"] = $this->Daftar_model->getById($id);
+        $data['data'] = $this->db->get_where('daftar', ['id' => $id])->row();
+        $this->load->library('pdf');
+        $this->pdf->setPaper('A4', 'potrait');
+        $this->pdf->filename = "profile-data-siswa.pdf";
+        $this->pdf->load_view('admin/pdfkeun', $data);
     }
 }

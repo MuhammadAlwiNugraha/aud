@@ -18,15 +18,15 @@ class Daftar_model extends CI_Model
         ];
     }
 
-    //menampilkan data mahasiswa berdasarkan id mahasiswa
+    //menampilkan data berdasarkan id
     public function getById($id)
     {
         return $this->db->get_where($this->table, ["id" => $id])->row();
         //query diatas seperti halnya query pada mysql 
-        //select * from mahasiswa where IdMhsw='$id'
+        //select * from where id='$id'
     }
 
-    //menampilkan semua data mahasiswa
+    //menampilkan semua data
     public function getAll()
     {
         $this->db->from($this->table);
@@ -34,10 +34,10 @@ class Daftar_model extends CI_Model
         $query = $this->db->get();
         return $query->result();
         //fungsi diatas seperti halnya query 
-        //select * from mahasiswa order by IdMhsw desc
+        //select * from order by id desc
     }
 
-    //menyimpan data mahasiswa
+    //menyimpan data
     public function save()
     {
         $data = array(
@@ -62,7 +62,7 @@ class Daftar_model extends CI_Model
         return $this->db->insert($this->table, $data);
     }
 
-    //edit data mahasiswa
+    //edit data
     public function update()
     {
         $data = array(
