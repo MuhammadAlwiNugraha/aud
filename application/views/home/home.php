@@ -28,12 +28,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?> rel=" stylesheet" type="text/css">
-	<link href=" <?= base_url("assets/css/bootstrap.min.css") ?>" rel="stylesheet">
-	<link href=" <?= base_url("assets/css/bootstrap.css") ?> rel=" stylesheet">
-	<link href=" <?= base_url("assets/js/bootstrap.min.js") ?> rel=" stylesheet">
-	<link href=" <?= base_url("assets/js/bootstrap.js") ?> rel=" stylesheet">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -172,10 +167,6 @@
 		</div>
 	</div>
 
-
-	<!-- Jquery dan Bootsrap JS -->
-	<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
-	<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
 
 </body>
 

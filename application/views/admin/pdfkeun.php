@@ -158,7 +158,7 @@
     </tr>
 </table>
 <div class="ttd" style="font-size:15px; padding-top: 1rem;">
-    <b>Hormat Kami,</b><br>
+    <b></b><br>
 </div>
 </div>
 </div>

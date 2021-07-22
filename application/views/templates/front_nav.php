@@ -70,7 +70,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
     <link href="<?= base_url('assets/'); ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?= base_url('assets/js/bootstrap.min.js') ?>" />
-
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/gallery.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -98,6 +98,18 @@
         $(window).on('scroll', function() {
             if ($(window).scrollTop() > 10) {
                 $('.navbar').addClass('active');
+            } else {
+                $('.navbar').removeClass('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    $(function() {
+        $(window).on('aria-expanded', 'true', function() {
+            if ($(window).scrollTop() < 10) {
+                $('.navbar').removeClass('active');
             } else {
                 $('.navbar').removeClass('active');
             }

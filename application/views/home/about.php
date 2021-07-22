@@ -14,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
 </head>
 
 <body>
@@ -50,7 +48,6 @@
 
     <!-- Jquery dan Bootsrap JS -->
     <script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
-    <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
 </body>
 
 </html>

@@ -392,7 +392,7 @@ html {
     background-color: #000;
   }
   .header {
-    height: 100vh;
+    height: 0vh;
   }
   .book .book-content {
     padding: 0;

@@ -7,8 +7,6 @@
     <title><?= $title; ?></title>
 
     <!-- Bootstrap CSS -->
-    <link href="<?= base_url('assets/'); ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
 </head>
 
 <body>
@@ -65,7 +63,6 @@
     <!-- Jquery dan Bootsrap JS -->
     <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
     <!--  -->
 </body>
 
