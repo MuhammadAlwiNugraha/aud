@@ -9,12 +9,6 @@ class Regist extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function indexx()
-    {
-        $this->load->view('templates/front_nav', $data);
-        $this->load->view('regist/index', $data);
-        $this->load->view('templates/front_footer', $data);
-    }
 
     public function index()
     {
