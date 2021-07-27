@@ -24,7 +24,9 @@
                                 <div class="d-flex flex-column text-center">
                                     <h2 class="text-serif font-weight-bold" data-aos="fade-up">Our Gallery</h2>
                                     <p class="d-block text-black-50" data-aos="fade-up" data-aos-delay="100">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sapiente pariatur commodi earum reiciendis dolorem, deleniti, repellendus autem.
+                                        LPK KINETA JAYA ABADI
+                                        Lembaga Pelatihan dan Keterampilan
+                                        Magang Jepang Solusi Masa Depan
                                     </p>
                                 </div>
                             </div>
@@ -39,9 +41,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+                                            <!-- <a href="" class="button button-orange">See More</a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -55,9 +57,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -71,9 +73,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -87,9 +89,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -103,9 +105,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -119,9 +121,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -135,9 +137,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -151,9 +153,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -167,9 +169,9 @@
                                         <div class="card-gallery-content">
                                             <h3 class="text-serif font-weight-bold text-white">LPK Kinjadi</h3>
                                             <p class="d-block mb-4 text-light">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nemo, expedita porro.
+                                                Foto Kegiatan siswa LPK Kinjadi selama pelatihan, pendidikan dan Penerimaan Magang di Jepang.
                                             </p>
-                                            <a href="" class="button button-orange">See More</a>
+
                                         </div>
                                     </div>
                                 </div>

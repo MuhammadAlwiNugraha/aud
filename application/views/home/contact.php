@@ -60,45 +60,40 @@
         <div class="container py-3">
             <div class="row" mt-5>
                 <div class="col-12 text-center mt-5">
-                    <h1>Kontak Admin lpk</h1>
-                    <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </h5>
+                    <h1>Kontak Admin LPK KINJADI</h1>
+                    <h5>Sampaikan pertanyaan kamu melalui kontak admin dibawah ini</h5>
                 </div>
             </div>
             <div class="row justify-content-center py-5">
                 <div class="col-md-4">
                     <center>
-                        <a class=link href="https://api.whatsapp.com/send?phone=6282118032891&text=&source=&data="><img src="assets/img/logowa.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
+                        <a class=link href="https://api.whatsapp.com/send?phone=6281222137799&text=&source=&data="><img src="assets/img/logowa.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
                         <h3 class="pb-4">Whatsapp</h3>
-                        <p>+62 82118032891</p>
-                        <center>
-                </div>
-                <div class="col-md-4">
-                    <center>
-                        <a class=link href="https://www.youtube.com/"><img src="assets/img/logoyb.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
-                        <h3 class="pb-4">Youtube</h3>
-                        <p>lpasksasa</p>
-                        <center>
-                </div>
-                <div class="col-md-4">
-                    <center>
-                        <a class=link href="https://www.instagram.com/"><img src="assets/img/logoig.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
-                        <h3 class="pb-4">Instagram</h3>
-                        <p>agsjsg</p>
-                        <center>
-                </div>
-                <div class="col-md-4">
-                    <center>
-                        <a class=link href="https://www.facebook.com/"><img src="assets/img/logofb.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
-                        <h3 class="pb-4">Facebook</h3>
-                        <p>lpk</p>
+                        <p>081222137799 Lpk Kinjadi Official</p>
+                        <p>081395186884 Ria Sensei</p>
                         <center>
                 </div>
 
                 <div class="col-md-4">
                     <center>
-                        <a class=link href="https://mail.google.com/mail/?view=cm&fs=1&to=alwi.n@icloud.com&su=Tanya lpk"><img src="assets/img/logoGM.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
+                        <a class=link href="https://www.instagram.com/lpkkinjadi/"><img src="assets/img/logoig.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
+                        <h3 class="pb-4">Instagram</h3>
+                        <p>@lpkkinjadi</p>
+                        <center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <a class=link href="https://www.facebook.com/lpk.kinjadi/"><img src="assets/img/logofb.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
+                        <h3 class="pb-4">Facebook</h3>
+                        <p>LPK Kinjadi</p>
+                        <center>
+                </div>
+
+                <div class="col-md-4">
+                    <center>
+                        <a class=link href="https://mail.google.com/mail/?view=cm&fs=1&to=kinetajayaabadi@gmail.com&su=Tanya lpk"><img src="assets/img/logoGM.png" width=30% height=10% class="img-fluid" alt="Responsive image"></a>
                         <h3 class="pb-4">E-Mail</h3>
-                        <p>@ashakjsh</p>
+                        <p>kinetajayaabadi@gmail.com</p>
                         <center>
                 </div>
             </div>

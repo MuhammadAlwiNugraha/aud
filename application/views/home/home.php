@@ -51,19 +51,29 @@
 
 	<div class="container">
 		<div class="row justify-content-center py-5">
-			<div class="col-md-3 pb-4">
-				<h2 class="animate__animated animate__bounceInDown">Magang</h2>
-				<p>- Min lulusan SMA/SMK</p>
-				<p>- Min lulusan SMA/SMK</p>
+			<div class="col-md-4 pb-4">
+				<h1>JISSHUSEI</h1>
+				<p>Program pemangangan (Jisshusei) merupakan program magang di perusahaan Jepang.
+					Setelah melaksanakam pelatihan, siswa bisa melaksanakan magang di Jepang.
+					Siswa juga berkesempatan untuk menjadi pegawai tetap di Perusahaan Jepang.</p>
+				<a target="_blank" href="http://api.whatsapp.com/send?phone=6281222137799&text=Hallo%20Kak,%20Pengen%20tau%20lebih%20lanjut%20tentang%20program%20magang%20di%20LPK%20Kinjadi" class="btn btn-success"><i class="fa fa-whatsapp"></i> Tanya Lebih Lanjut...</a>
 			</div>
-			<div class="col-md-3 pb-4">
-				<h2 class="animate__animated animate__bounceInDown">Tokutei Ginou</h2>
-				<p>Memudahkan siswa mengerjakan soal dengan tepat dan cepat.</p>
+			<div class="col-md-4 pb-4">
+				<h1>NIHONGO GAKKOU</h1>
+				<p>Program Sekolah bahasa Jepang (Nihongo Gakkou) merupakan program bagi mereka yang berasal
+					dari luar negara Jepang untuk melanjutkan pendidikan perguruan tinggi di Jepang (
+					pendidikan vokasi, universitas, dan sebagainya)</p>
+				<a target="_blank" href="http://api.whatsapp.com/send?phone=6281222137799&text=Hallo%20Kak,%20Pengen%20tau%20lebih%20lanjut%20tentang%20program%20magang%20di%20LPK%20Kinjadi" class="btn btn-success"><i class="fa fa-whatsapp"></i> Tanya Lebih Lanjut...</a>
+
 			</div>
-			<div class="col-md-3 pb-4">
-				<h2 class="animate__animated animate__bounceInDown">Gakkou</h2>
-				<p>Tutorial Service Time siap membantu ketika kamu kesulitan dalam pelajaran.</p>
+			<div class="col-md-4 pb-4">
+				<h1>TOKUTEI GINOU</h1>
+				<p>Program Pekerja Keahlian Khusus (Tokutei Ginou) merupakan program bagi pekerja
+					atau pekerja magang yang ingin kembali bekerja di Jepang dapat mengikuti program
+					tersebut. Status dari magang berubah menjadi pekerja terampil khusus</p>
+				<a target="_blank" href="http://api.whatsapp.com/send?phone=6281222137799&text=Hallo%20Kak,%20Pengen%20tau%20lebih%20lanjut%20tentang%20program%20magang%20di%20LPK%20Kinjadi" class="btn btn-success"><i class="fa fa-whatsapp"></i> Tanya Lebih Lanjut...</a>
 			</div>
+
 		</div>
 	</div>
 
@@ -128,7 +138,8 @@
 									<div class="single-icon">
 										<i class="fa fa-mobile" style="font-size:48px"></i>
 										<p>
-											WhatsApp:<br> 0812 8224 1075<br>
+											WhatsApp:<br> 0812 2213 7799<br>
+											<span>0813 9518 6884</span><br>
 											<span>Senin - Sabtu</span><br>
 											<span> (08.00 - 17.00)</span>
 										</p>
