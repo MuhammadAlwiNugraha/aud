@@ -68,7 +68,7 @@ class Auth extends CI_Controller
     }
 
 
-    public function registration()
+    public function huehue()
     {
         if ($this->session->userdata('email')) {
             redirect('user');
@@ -87,7 +87,7 @@ class Auth extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Registration';
             $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/registration');
+            $this->load->view('auth/huehue');
             $this->load->view('templates/auth_footer');
         } else {
             $email = $this->input->post('email', false);
