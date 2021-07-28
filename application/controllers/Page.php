@@ -11,7 +11,7 @@ class Page extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'My Profile';
+        $data['title'] = 'LPK KINJADI';
 
         $this->load->view('templates/front_nav');
         $this->load->view('home/home');
