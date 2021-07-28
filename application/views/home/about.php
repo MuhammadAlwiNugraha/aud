@@ -2,7 +2,7 @@
 <html lang="en">
 <style>
     .JumboHeaderImg {
-        background-image: url("assets/img/bg6.jpg");
+        background-image: url("assets/img/bg6888.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

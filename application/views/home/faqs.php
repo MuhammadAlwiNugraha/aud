@@ -72,7 +72,7 @@
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne">
-                                Collapsible Group Item #1
+                                Bagaimana cara mendaftar di LPK KINJADI
                             </button>
                         </h2>
                     </div>

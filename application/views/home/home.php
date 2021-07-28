@@ -86,13 +86,13 @@
 
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="assets/img/bg.jpg" class="d-block w-100" alt="gambar">
+				<img src="assets/img/carousel1.jpg" class="d-block w-100" alt="gambar">
 			</div>
 			<div class="carousel-item">
-				<img src="assets/img/bg2.jpg" class="d-block w-100" alt="gambar">
+				<img src="assets/img/carousel2.jpg" class="d-block w-100" alt="gambar">
 			</div>
 			<div class="carousel-item">
-				<img src="assets/img/background7.png" class="d-block w-100" alt="gambar">
+				<img src="assets/img/carousel3.jpg" class="d-block w-100" alt="gambar">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
