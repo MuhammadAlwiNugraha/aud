@@ -30,20 +30,6 @@
 
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $("#hitungumur").datepicker();
-        });
-
-        window.onload = function() {
-            $('#hitungumur').on('change', function() {
-                var dob = new Date(this.value);
-                var today = new Date();
-                var age = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#umur').val(age);
-            });
-        }
-    </script>
 </head>
 <style>
     .navbar .nav-link {
@@ -181,20 +167,6 @@
                                             <?= form_error('agama', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
-
-                                    <!-- <div class="input-group">
-                                <label class="label m-2 col-4">JENIK KELAMIN</label>
-                                <div class="p-t-10">
-                                    <label class="radio-container m-r-45" value="PRIA">LAKI-LAKI
-                                        <input type="radio" name="jk">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="radio-container" value="WANITA">PEREMPUAN
-                                        <input type="radio" name="jk">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div> -->
 
                                     <div class="input-group">
                                         <label class="label m-3 col-3">JENIS KELAMIN</label>

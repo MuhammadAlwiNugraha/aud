@@ -1,30 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-	.JumboHeaderImg0 {
-		background-image: url("assets/img/bg6.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-
-	.carousel-item {
-		width: 1400px;
-		height: 400px;
-	}
-
-	.btn-primary,
-	.btn-primary:hover,
-	.btn-primary:active,
-	.btn-primary:visited {
-		background-color:  !important;
-	}
-
-	#sosmedicon a:link .fa,
-	#sosmedicon a:visited .fa {
-		color: #57554d;
-	}
-</style>
+<link href="<?= base_url('assets/'); ?>css/home.css" rel="stylesheet" type="text/css">
 
 <head>
 	<meta charset="UTF-8">

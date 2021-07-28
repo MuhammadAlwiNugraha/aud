@@ -13,7 +13,7 @@ class Gallery extends CI_Controller
         $data['title'] = 'Gallery';
 
         $this->load->view('templates/front_nav');
-        $this->load->view('home/gallery');
+        $this->load->view('home/gallery', $data);
         $this->load->view('templates/front_footer');
     }
 }
