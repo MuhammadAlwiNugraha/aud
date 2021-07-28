@@ -116,7 +116,7 @@
 							<div class=" col-md-4 col-sm-4 col-xs-12">
 								<div class="contact-icon text-center">
 									<div class="single-icon" id="sosmedicon">
-										<a target="_blank" href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1013888.9392140873!2d107.1524341!3d-6.9497584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c7834a22ae3b734!2sPT%20KINETA%20JAYA%20ABADI!5e0!3m2!1sid!2sid!4v1625643803343!5m2!1sid!2sid">
+										<a target="_blank" href="https://goo.gl/maps/bbYnzZZYps1UiHkV9">
 
 											<i class="fa fa-map-marker" style="font-size:48px"></i>
 										</a>
