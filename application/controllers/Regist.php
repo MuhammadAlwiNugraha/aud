@@ -96,7 +96,8 @@ class Regist extends CI_Controller
             //$this->db->insert('daftar', $data);
             $insert = $this->db->insert('daftar', $data);
             if ($insert) {
-                echo '<script>alert("Sukses! Anda berhasil melakukan register. Silahkan hubungi kontak center.");window.location.href="' . base_url('/regist') . '";</script>';
+                $this->session->set_flashdata('success_register', 'Proses Pendaftaran Berhasil Hubungi Contact Center Segera!');
+                redirect('/regist');
             }
             //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please Contact administrator</div>');
             //     redirect('/regist');

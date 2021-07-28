@@ -50,6 +50,7 @@ class Pdf extends Dompdf
         $options = new Options();
         $options->set('isRemoteEnabled', true);
         $options->setChroot("/home/yaelahwi/lpk.besoksadar.my.id/");
+        $options->setChroot("/home/besoksadarmy/public_html/lpk");
         $this->setOptions($options);
 
         $html = $this->ci()->load->view($view, $data, TRUE);

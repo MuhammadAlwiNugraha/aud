@@ -78,6 +78,23 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Registration Form</h2>
+                    <?php
+                    if ($this->session->flashdata('error') != '') {
+                        echo '<div class="alert alert-danger" role="alert">';
+                        echo $this->session->flashdata('error');
+                        echo '</div>';
+                    }
+                    ?>
+
+                    <?php
+                    if ($this->session->flashdata('success_register') != '') {
+                        echo '<div class="alert alert-info" role="alert">';
+                        echo $this->session->flashdata('success_register');
+                        echo '</div>';
+                    }
+                    ?>
+                    <br>
+                    <br>
                     <h5> HARAP DIISI MENGGUNAKAN HURUF BESAR / HURUF KAPITAL <h5>
                             <br>
                             <form class="user" method="post" action="<?= base_url('regist/'); ?>" enctype="multipart/form-data">
@@ -289,6 +306,24 @@
                                         <?= form_error('ref', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                 </div>
+                                <br>
+                                <br>
+                                <br>
+                                <?php
+                                if ($this->session->flashdata('error') != '') {
+                                    echo '<div class="alert alert-danger" role="alert">';
+                                    echo $this->session->flashdata('error');
+                                    echo '</div>';
+                                }
+                                ?>
+
+                                <?php
+                                if ($this->session->flashdata('success_register') != '') {
+                                    echo '<div class="alert alert-info" role="alert">';
+                                    echo $this->session->flashdata('success_register');
+                                    echo '</div>';
+                                }
+                                ?>
                                 <div class="p-t-15">
                                     <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                                 </div>
