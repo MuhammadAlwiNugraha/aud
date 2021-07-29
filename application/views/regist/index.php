@@ -144,7 +144,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+
+                                    <div class="col -6">
                                         <div class="input-group">
                                             <label class="label">USIA SAAT INI</label>
                                             <input class="input--style-4" type="text" id="umur" name="usia" value="<?= set_value('usia'); ?>">
@@ -153,25 +154,25 @@
                                     </div>
                                 </div>
 
-
-                                <div class="input-group">
-                                    <label class="label">ALAMAT LENGKAP SESUAI KTP</label>
-                                    <input class="input--style-4" type="text" name="alamat_ktp" value="<?= set_value('alamat_ktp'); ?>">
-                                    <?= form_error('alamat_ktp', '<small class="text-danger pl-3">', '</small>'); ?>
-                                </div>
-
-                                <div class="input-group">
-                                    <label class="label">ALAMAT LENGKAP TEMPAT TINGGAL SAAT INI</label>
-                                    <input class="input--style-4" type="text" name="alamat_tinggal" value="<?= set_value('alamat_tinggal'); ?>">
-                                    <?= form_error('alamat_tinggal', '<small class="text-danger pl-3">', '</small>'); ?>
-                                </div>
-
-
                                 <div class="row row-space">
                                     <div class="input-group">
-                                        <label class="label m-3 col-2">AGAMA</label>
+                                        <label class="label">ALAMAT LENGKAP SESUAI KTP</label>
+                                        <textarea class="input--style-4" type="text" name="alamat_ktp" value="<?= set_value('alamat_ktp'); ?>" class="form-control" id="exampleFormControlTextarea1" cols="61" rows="2"></textarea>
+                                        <?= form_error('alamat_ktp', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label class="label">ALAMAT LENGKAP TEMPAT TINGGAL SAAT INI</label>
+                                        <textarea class="input--style-4" type="text" name="alamat_tinggal" value="<?= set_value('alamat_tinggal'); ?>" class="form-control" id="exampleFormControlTextarea1" cols="61" rows="2"></textarea>
+                                        <?= form_error('alamat_tinggal', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputState">AGAMA</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="agama" value="<?= set_value('agama'); ?>">
+                                            <select id="inputState" class="form-control" name="agama" value="<?= set_value('agama'); ?>">
                                                 <option disabled="disabled" selected="selected">Choose option</option>
                                                 <option value="ISLAM">ISLAM</option>
                                                 <option value="KRISTEN">KRISTEN</option>
@@ -184,20 +185,19 @@
                                             <?= form_error('agama', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
-
-                                    <div class="input-group">
-                                        <label class="label m-3 col-3">JENIS KELAMIN</label>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputState">JENIS KELAMIN</label>
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="jk" value="<?= set_value('jk'); ?>">
+                                            <select id="inputState" class="form-control" name="jk" value="<?= set_value('jk'); ?>">
                                                 <option disabled="disabled" selected="selected">Choose option</option>
                                                 <option value="PRIA">PRIA</option>
                                                 <option value="WANITA">WANITA</option>
-
                                             </select>
                                             <div class="select-dropdown"></div>
                                             <?= form_error('jk', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
+
                                 </div>
 
 
@@ -245,7 +245,7 @@
                                     </div>
                                 </div>
                                 <div class="row row-space">
-                                    <div class="col-6">
+                                    <div class="col-9">
                                         <label class="label">NOMER TELP</label>
                                         <small>AKTIF GSM DAN WHATSAPP</small>
                                         <input class="input--style-4" type="text" name="telp" value="<?= set_value('telp'); ?>">
@@ -300,10 +300,12 @@
                                 </div>
                                 <div class="row row-space">
                                     <div class="col-12">
-                                        <label class="label">REF</label>
-                                        <small>ANDA MENDAPATKAN INFORMASI MENGENAI PROGRAM INI DARI MANA ATAU SIAPA, CONTOH : IKLAN (SEBUTKAN MEDIANYA), TEMAN, SAUDARA ATAU KERABAT LAINNYA (SEBUTKAN NAMA LENGKAPNYA),</small>
-                                        <input class="input--style-4" type="text" name="ref" value="<?= set_value('ref'); ?>">
-                                        <?= form_error('ref', '<small class="text-danger pl-3">', '</small>'); ?>
+                                        <div class="input-group">
+                                            <label class="label">REFERENSI</label>
+                                            <small>ANDA MENDAPATKAN INFORMASI MENGENAI PROGRAM INI DARI MANA ATAU SIAPA, CONTOH : IKLAN (SEBUTKAN MEDIANYA), TEMAN, SAUDARA ATAU KERABAT LAINNYA (SEBUTKAN NAMA LENGKAPNYA)</small>
+                                            <textarea class="input--style-4" type="text" name="ref" value="<?= set_value('ref'); ?>" class="form-control" id="exampleFormControlTextarea1" cols="61" rows="2"></textarea>
+                                            <?= form_error('ref', '<small class="text-danger pl-3">', '</small>'); ?>
+                                        </div>
                                     </div>
                                 </div>
                                 <br>

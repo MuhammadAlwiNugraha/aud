@@ -28,11 +28,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <?php
-                    //create form
-                    $attributes = array('id' => 'FrmEditDaftar', 'method' => "post", "autocomplete" => "off");
-                    echo form_open('', $attributes);
-                    ?>
+
                     <div class="">
                         <div class="wrapper wrapper--w680">
                             <div class="card card-4">

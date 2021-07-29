@@ -29,6 +29,9 @@
                     <li class="nav-item"><a href="<?= base_url('about') ?>" class="nav-link text-uppercase font-weight-bold">About</a></li>
                     <li class="nav-item"><a href="<?= base_url('faqs') ?>" class="nav-link text-uppercase font-weight-bold">FAQs</a></li>
                     <li class="nav-item"><a href="<?= base_url('contact') ?>" class="nav-link text-uppercase font-weight-bold">contact</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-md" target="_blank" href="<?= base_url('/regist') ?>">Daftar</a>
+                    </li>
 
                 </ul>
             </div>
