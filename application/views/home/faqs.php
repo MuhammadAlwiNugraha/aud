@@ -23,15 +23,19 @@
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Collapsible Group Item #1
+                                Apa perbedaan LPK KINJADI dengan LPK yang lainnya?
                             </button>
                         </h2>
                     </div>
 
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
+                            Siapa saja yang dapat mengikuti program di LPK KINJADI? Peserta mulai dari Lulusan SMA sampai lulusan Sarjana/S1 dapat
+                            mengikuti program-program yang telah tersedia di LPK KINJADI. Program-programnya dapat kamu lihat <a target="_blank" href="http://api.whatsapp.com/send?phone=6281222137799&text=Hallo%20Kak,%20Pengen%20tau%20lebih%20lanjut%20tentang%20program%20magang%20di%20LPK%20Kinjadi">
+                                disini!</a>
+                            Bagaimana LPK KINJADI meningkatkan pembelajaran kepada para Peserta? LPK KINJADI selalu berusaha meningkatkan mutu
+                            pembelajaran baik dari fasilitas maupun cara belajar demi kenyamanan selama pembelajaran di LPK KINJADI dan menerapkan
+                            mengenai sikap etos kerja sesuai dengan budaya Jepang. </div>
                     </div>
                 </div>
                 <div class="card">
