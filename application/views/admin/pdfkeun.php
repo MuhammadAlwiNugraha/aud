@@ -45,14 +45,15 @@
                 <div class="kop_nota">
                     <table width="100%">
                         <tr>
-                            <td rowspan="2" width="30%"><img src="<?php echo 'assets/img/logo555.jpg'; ?>" alt="" width="140" height="140"></td>
+                            <td rowspan="2" width="30%"><img src="<?= base_url('assets/img/logo555.jpg'); ?>" alt="" width="140" height="140"></td>
+
                             <td class="sub1"><b>LPK KINJADI</b></td>
                         </tr>
                         <tr>
                             <td>
                                 Jl. Buncis No.6, Cikole, Lembang Kabupaten Bandung Barat, Jawa Barat, Indonesia<br>
                                 Hp. 0812 8224 1075<br>
-                                <b>WA : Hp. 0812 8224 1075 NPWP. 25.687.980.0-403.000</b><br>
+                                <b>WA : Hp. 0812 2213 7799 </b><br>
                             </td>
                         </tr>
                     </table>

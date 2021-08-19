@@ -13,6 +13,81 @@ class Daftar_model extends CI_Model
                 'field' => 'nama',  //samakan dengan atribute name pada tags input
                 'label' => 'Nama',  // label yang kan ditampilkan pada pesan error
                 'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'email',  //samakan dengan atribute name pada tags input
+                'label' => 'Email',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'nik',  //samakan dengan atribute name pada tags input
+                'label' => 'NIK',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'tempat_lahir',  //samakan dengan atribute name pada tags input
+                'label' => 'Tempat lahir',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'tanggal_lahir',  //samakan dengan atribute name pada tags input
+                'label' => 'Tanggal lahir',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'usia',  //samakan dengan atribute name pada tags input
+                'label' => 'Usia',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'alamat_ktp',  //samakan dengan atribute name pada tags input
+                'label' => 'Alamat KTP',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'alamat_tinggal',  //samakan dengan atribute name pada tags input
+                'label' => 'Alamat Tinggal',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'agama',  //samakan dengan atribute name pada tags input
+                'label' => 'Agama',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'jk',  //samakan dengan atribute name pada tags input
+                'label' => 'Jenis Kelamin',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'bb',  //samakan dengan atribute name pada tags input
+                'label' => 'Berat Badan',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'tb',  //samakan dengan atribute name pada tags input
+                'label' => 'Tinggi Badan',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'pendidikan',  //samakan dengan atribute name pada tags input
+                'label' => 'Pendidikan',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'jurusan',  //samakan dengan atribute name pada tags input
+                'label' => 'Jurusan',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'telp',  //samakan dengan atribute name pada tags input
+                'label' => 'Nomer telp',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'ref',  //samakan dengan atribute name pada tags input
+                'label' => 'Referensi',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
             ]
 
         ];
