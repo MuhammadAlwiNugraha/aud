@@ -218,7 +218,7 @@
                                     </div>
                                 </div>
                                 <div class="row row-space">
-                                    <div class="col-6">
+                                    <div class="form-group col-md-6">
                                         <div class="input-group">
                                             <label class="label">PENDIDIKAN TERAKHIR</label>
                                             <div class="rs-select2 js-select-simple select--no-search">
@@ -236,7 +236,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+
+                                    <div class="col-md-6">
                                         <div class="input-group">
                                             <label class="label">JURUSAN</label>
                                             <input class="input--style-4" type="text" name="jurusan" value="<?= set_value('jurusan'); ?>">
