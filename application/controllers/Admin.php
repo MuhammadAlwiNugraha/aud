@@ -237,7 +237,6 @@ class Admin extends CI_Controller
             "pendidikan" => $this->input->post('pendidikan'),
             "jurusan" => $this->input->post('jurusan'),
             "telp" => $this->input->post('telp'),
-
             "ref" => $this->input->post('ref')
         );
 
