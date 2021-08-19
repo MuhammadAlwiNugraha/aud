@@ -46,8 +46,7 @@
                     <table width="100%">
                         <tr>
                             <td rowspan="2" width="30%"><img src="<?= base_url('assets/img/logo555.jpg'); ?>" alt="" width="140" height="140"></td>
-
-                            <td class="sub1"><b>LPK KINJADI</b></td>
+                            <td class="sub1"><b>LPK KINETA JAYA ABADI</b></td>
                         </tr>
                         <tr>
                             <td>
