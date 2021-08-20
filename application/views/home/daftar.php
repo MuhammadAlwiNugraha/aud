@@ -67,7 +67,6 @@
                             <option value="LAKI - LAKI" <?= set_select('jk', 'LAKI - LAKI'); ?>>LAKI - LAKI</option>
                             <option value="PEREMPUAN" <?= set_select('jk', 'PEREMPUAN'); ?>>PEREMPUAN</option>
                         </select>
-
                     </div>
                     <div class="mb-3">
                         <label for="InputForName" class="form-label">BERAT BADAN (KG)</label>
@@ -101,7 +100,6 @@
                         <label for="InputForName" class="form-label">REFERENSI</label>
                         <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('ref') ?>">
                     </div>
-
                     <button type="submit" class="btn btn-primary">Register</button>
                 </form>
             </div>

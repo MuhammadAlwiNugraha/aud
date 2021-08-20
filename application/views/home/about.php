@@ -13,11 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
-
 </head>
 
 <body>
-
     <div class="jumbotron JumboHeaderImg">
         <div class="container py-3">
             <div class="row" mt-5>
@@ -43,9 +41,6 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- Jquery dan Bootsrap JS -->
     <script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
 </body>

@@ -6,22 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LPK KINJADI</title>
-
-
 </head>
 
 <body>
-
 	<div class="jumbotron JumboHeaderImg0">
 		<div class="container py-1">
-			<div class="r	ow justify-content-center py-5">
+			<div class="row justify-content-center py-5">
 				<div class="col-lg-6">
 					<h2 class="pb-4" style="color:black;">Kineta Jaya Abadi </br> Lembaga Pelatihan dan Keterampilan</h2>
 					<p style="color:black;">Kineta Jaya Abadi Memiliki program magang ke Jepang, yaitu program yang di peruntukkan bagi pemuda pemudi Indonesia untuk melakukan magang di perusahaan penerima di Jepang dalam kurun waktu tertentu. Untuk bisa mengikuti program pemagangan ke Jepang seluruh calon peserta akan menempuh beberapa tahapan seperti seleksi awal dan pelatihan persiapan tes rekrut, wawancara, pelatihan pra pemberangkatan dan pembelajaran mengenai sikap etos kerja sesuai dengan budaya Jepang.
 					</p>
 					<!-- <a class="btn btn-primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfYUL3xbPkPk4PjEEq_FnAOsFFFLQ15hASpURDggzjQufYkOg/viewform">Daftar Program</a> -->
 					<a class="btn btn-primary" target="_blank" href="<?= base_url('/regist') ?>">Daftar Program</a>
-
 				</div>
 				<div class=" col-lg-4"><img class="img-fluid" src="">
 				</div>
@@ -83,8 +79,6 @@
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
-	</div>
-
 	</div>
 
 	<div id="contact" class="contact-area">

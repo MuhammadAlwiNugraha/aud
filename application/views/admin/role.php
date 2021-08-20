@@ -23,16 +23,16 @@
                 <tbody>
                     <?php $i = 1; ?>
                     <?php foreach ($role as $r) : ?>
-                    <tr>
-                        <th scope="row"><?= $i; ?></th>
-                        <td><?= $r['role']; ?></td>
-                        <td>
-                            <a href="<?= base_url('admin/roleaccess/') . $r['id']; ?>" class="badge badge-warning">access</a>
-                            <a href="" class="badge badge-success">edit</a>
-                            <a href="" class="badge badge-danger">delete</a>
-                        </td>
-                    </tr>
-                    <?php $i++; ?>
+                        <tr>
+                            <th scope="row"><?= $i; ?></th>
+                            <td><?= $r['role']; ?></td>
+                            <td>
+                                <a href="<?= base_url('admin/roleaccess/') . $r['id']; ?>" class="badge badge-warning">access</a>
+                                <a href="" class="badge badge-success">edit</a>
+                                <a href="" class="badge badge-danger">delete</a>
+                            </td>
+                        </tr>
+                        <?php $i++; ?>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -74,4 +74,4 @@
             </form>
         </div>
     </div>
-</div> 
+</div>
