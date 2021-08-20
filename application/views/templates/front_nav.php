@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPK KINJADI</title>
+    <link rel="shortcut icon" href="<?= base_url('assets/') ?>img/favicon.ico" type="image/ico">
 
     <!-- Bootstrap CSS -->
     <link href="<?= base_url('assets/'); ?>css/front_nav.css" rel="stylesheet" type="text/css">
